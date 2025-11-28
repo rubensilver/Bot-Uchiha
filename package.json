@@ -1,0 +1,22 @@
+{
+  "name": "bot-uchiha",
+  "version": "1.0.0",
+  "description": "Bot Uchiha",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "preinstall": "node ./engine-requirements.js",
+    "start": "node index.js",
+    "lint": "eslint .",
+    "test": "echo \"No tests specified\" && exit 0"
+    "build": "o seu comando de build aqui"
+  },
+  "dependencies": {
+    "@deyvydofc/baileys": "1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
