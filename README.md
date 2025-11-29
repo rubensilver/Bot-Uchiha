@@ -1,6 +1,4 @@
 # 𝐔𝐜𝐡𝐢𝐡𝐚-𝐁𝐨𝐭 👾
-
-# 𝐔𝐜𝐡𝐢𝐡𝐚-𝐁𝐨𝐭 👾
 Este é o bot oficial do proprietário **𝐑ú𝐛𝐞𝐧 𝐒𝐢𝐥𝐯𝐞𝐫 👨🏽‍💻**.
 
 ## Informações do Bot
