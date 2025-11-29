@@ -8,8 +8,6 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-unused-vars": "off",   
-    "no-console": "off"
-  },
-  "ignorePatterns": ["dist/**"] // Ignora TODOS os arquivos na pasta dist
+    "no-node-globals": "off" // Desativa a regra para globais do Node.js
+  }
 }

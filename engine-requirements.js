@@ -1,11 +1,15 @@
-#!/usr/bin/env node
+/* eslint-disable */
+// Linha de shebang para execução como script diretamente
+/* eslint-enable */
+
 // engine-requirements.js
 // Faz uma verificação robusta da versão mínima do Node.js requerida.
-// Lê "engines.node" de package.json quando disponível; caso contrário, usa um fallback.
+// Lê "engines.node" de package.json quando disponível, caso contrário, usa um fallback.
 // Saída é clara para CI e exit code 1 em caso de falha.
 
 'use strict';
 
+import process from 'node:process';
 const fs = require('fs');
 const path = require('path');
 
@@ -19,7 +23,6 @@ function detectPackageJsonStartDir() {
   let dir = process.cwd();
   const root = path.parse(dir).root;
 
-  // Removida condição constante do `if (true)` incorretamente usada
   while (dir !== root) {
     const candidate = path.join(dir, 'package.json');
     if (fs.existsSync(candidate)) {
@@ -61,7 +64,7 @@ try {
         minMajor = parseMajorFromRange(String(pkg.engines.node));
         if (minMajor) {
           console.log(
-            `[engine-requirements] Detectado engines.node: >=${minMajor}.x de ${pkgPath}`,
+            `[engine-requirements] Detectado engines.node: >=${minMajor}.x de ${pkgPath}`
           );
         }
       }
@@ -81,10 +84,10 @@ try {
   if (currentMajor < minMajor) {
     exitWithMessage(
       `Versão do Node.js insuficiente. Requerido: >=${minMajor}.x (detectado: ${nodeVersion}).\n` +
-        'Em GitHub Actions atualize a ação setup-node para usar uma versão compatível (ex: 16 ou 18):\n' +
+        'Em GitHub Actions atualize a ação setup-node para usar uma versão compatível (ex: 16 ou 20):\n' +
         '  uses: actions/setup-node@v3\n' +
         '  with:\n' +
-        '    node-version: \'18\'\n',
+        '    node-version: \'20\'\n',
     );
   }
 
