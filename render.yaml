@@ -3,7 +3,7 @@ services:
     name: uchiha-bot
     env: node
     plan: free
-    repo: <YOUR_GIT_REPO_URL>
+    repo: https://github.com/rubensilver/Bot-Uchiha.git
     region: oregon
     buildCommand: npm run build
     startCommand: npm start
